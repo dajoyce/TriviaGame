@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Random Movie Trivia</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header><h1>Random Movie Trivia</h1></header>
+
+    <div id="quizContainer">
+      <form id="quiz" name="quiz">
+        
+        <p>
+          1.  What is the all time Best Christmas Movie Ever?
+        </p>
+        <input type="radio" id="mc" name="quest1" value="dieHard">Die Hard
+        <input type="radio" id="mc" name="quest1" value="ernestSavesChristmas">Ernest Saves Christmas
+        <input type="radio" id="mc" name="quest1" value="jingleAllTheWay">Jingle All the Way</form>
+
+        <p>
+          2. Which of the following movies had an alternate ending where the
+          title character traveled back in time and murdered a baby Adolf
+          Hitler?
+        </p>
+        <input type="radio" id="mc" name="quest2" value="aStarIsBorn">Star is Born
+        <input type="radio" id="mc" name="quest2" value="wolverine">Wolverine
+        <input type="radio" id="mc" name="quest2" value="deadpool"> Deadpool 2</form>
+
+        <p>
+          3. What is the best Movie about busting Ghosts?
+        </p>
+        <input type="radio" id="mc" name="quest3" value="ghost">Ghost
+        <input type="radio" id="mc" name="quest3" value="ghostBusters">Ghost Busters
+        <input type="radio" id="mc" name="quest3" value="casper">Casper The Friendly Ghost</form>
+
+        <p>
+          4.  What is the worst Movie about busting Ghosts?
+        </p>
+        <input type="radio" id="mc" name="quest4" value="beetlejuice">Beetlejuice
+        <input type="radio" id="mc" name="quest4" value="it">IT
+        <input type="radio" id="mc" name="quest4" value="ghostBustersTwo">Ghost Busters 2</form>
+
+        <p>
+          5.  Who was Wreck it Ralph jealous of for always getting to win?
+        </p>
+        <input type="radio" id="mc" name="quest5" value="mBison">M. Bison
+        <input type="radio" id="mc" name="quest5" value="kingKoopa">King Koopa
+        <input type="radio" id="mc" name="quest5" value="fixItFelix">Fix it Felix</form>
+
+        <p>
+          6.  According to the Quinjet voice id/recognition in the movie Thor Ragnarok, who is the strongest Avenger?
+        </p>
+        <input type="radio" id="mc" name="quest6" value="thor">Thor
+        <input type="radio" id="mc" name="quest6" value="hulk">Hulk
+        <input type="radio" id="mc" name="quest6" value="warMachine">War Machine</form>
+
+        <p>
+          7.  Where does Wonder Woman originally hail from (hint it's an island)?
+        </p>
+        <input type="radio" id="mc" name="quest7" value="queens">Queens
+        <input type="radio" id="mc" name="quest7" value="asgard">Asgard
+        <input type="radio" id="mc" name="quest7" value="tmyshecira">Themyscira</form>
+
+        <p>
+          8.  The phrase "Get to the Choppa" belongs to which of the following 80s action stars?
+        </p>
+        <input type="radio" id="mc" name="quest8" value="arnold">Arnold Schwarzenegger
+        <input type="radio" id="mc" name="quest8" value="bruce">Bruce Willis
+        <input type="radio" id="mc" name="quest8" value="chuck">Chuck Norris</form>
+
+        <p>
+          9.  Which of the following is the most famous dog from a movie?
+        </p>
+        <input type="radio" id="mc" name="quest9" value="wilfrey">Wilfrey
+        <input type="radio" id="mc" name="quest9" value="lassie">Lassie
+        <input type="radio" id="mc" name="quest9" value="toto">Toto</form>
+
+        <p>
+          10.  Who is Keyser Söze (which actor portrayed him)?
+        </p>
+        <input type="radio" id="mc" name="quest10" value="stephen">Stephen Baldwin
+        <input type="radio" id="mc" name="quest10" value="benicio">Benicio Del Toro
+        <input type="radio" id="mc" name="quest10" value="kevin">Kevin Spacey</form>
+
+        <br>
+        <input id = "button" type = "button" value = "submit">
+      </form>
+    </div>
+
+    <div id="results">
+      <h2>It's over, here's how you did:</h2>
+      <p id="numberCorrect"></p>
+      <p id="numberIncorrect"></p>
+      <p id="unanswered"></p>
+    </div>
+    <script src="assets/javascript/app.js"></script>
+  </body>
+</html>
