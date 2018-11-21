@@ -5,8 +5,9 @@ body {
 
 header {
   background: rgb(238, 215, 7);
-  color: #ffffff;
+  color: #1604b6;
   padding: 5px;
+  margin-top: 20px;
   margin-left: 80px;
   margin-right: 80px;
   text-align: center;
@@ -21,4 +22,23 @@ header {
   margin-left: 120px;
   margin-right: 120px;
   line-height: 1.5;
+}
+
+#results {
+  background: rgb(238, 215, 7);
+  color: #1604b6;
+  padding: 5px;
+  margin-top: 30px;
+  margin-left: 120px;
+  margin-right: 120px;
+  line-height: 1.5;
+}
+
+#timer {
+  color: red;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 5px;
+  line-height: 3;
+  text-align: center;
 }

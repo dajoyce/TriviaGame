@@ -1,75 +1,109 @@
-$(document).ready(function() {
-  var question1 = document.quiz.quest1.value;
-  var question2 = document.quiz.quest2.value;
-  var question3 = document.quiz.quest3.value;
-  var question4 = document.quiz.quest4.value;
-  var question5 = document.quiz.quest5.value;
-  var question6 = document.quiz.quest6.value;
-  var question7 = document.quiz.quest7.value;
-  var question8 = document.quiz.quest8.value;
-  var question9 = document.quiz.quest9.value;
-  var question10 = document.quiz.quest10.value;
-  var correct = 0;
-  var incorrect = 0;
+var correct = 0;
+var incorrect = 0;
+//var unanswered = -20;
 
-  $("#button").on("click", function check() {
-    if (question1 == "dieHard") {
-      correct++;
-    } else {
-      incorrect++;
+function MyTimer(callback, val) {
+  val = val || 60;
+  var timer = setInterval(function() {
+    callback(val);
+    if (val-- <= 0) {
+      clearInterval(timer);
     }
-    if (question2 == "deadpool") {
-      correct++;
-    } else {
-      incorrect++;
-    }
-
-    if (question3 == "ghostBusters") {
-      correct++;
-    } else {
-      incorrect++;
-    }
-
-    if (question4 == "ghostBustersTwo") {
-      correct++;
-    } else {
-      incorrect++;
-    }
-
-    if (question5 == "fixItFelix") {
-      correct++;
-    } else {
-      incorrect++;
-    }
-
-    if (question6 == "hulk") {
-      correct++;
-    } else {
-      incorrect++;
-    }
-    if (question7 == "tmyshecira") {
-      correct++;
-    } else {
-      incorrect++;
-    }
-
-    if (question8 == "arnold") {
-      correct++;
-    } else {
-      incorrect++;
-    }
-
-    if (question9 == "toto") {
-      correct++;
-    } else {
-      incorrect++;
-    }
-    if (question10 == "kevin") {
-      correct++;
-    } else {
-      incorrect++;
-    }
-
-    $("#numberCorrect").text("Correct: " + correct);
-  });
+  }, 1000);
+}
+new MyTimer(function(val) {
+  var timerMsg = "00:" + (val >= 10 ? val : "0" + val);
+  document.getElementById("timer").textContent = timerMsg;
 });
+
+$("#clearButton").on("click", function() {
+  console.log("play again");
+  document.location.reload(true);
+});
+
+$("#button").on("click", function check() {
+  if ($("#mc1").is(":checked")) {
+    console.log("you win");
+    correct++;
+  } else {
+    console.log("wrong");
+    incorrect++;
+  }
+  if ($("#mc6").is(":checked")) {
+    console.log("you win");
+    correct++;
+  } else {
+    console.log("wrong");
+    incorrect++;
+  }
+  if ($("#mc8").is(":checked")) {
+    console.log("you win");
+    correct++;
+  } else {
+    console.log("wrong");
+    incorrect++;
+  }
+  if ($("#mc12").is(":checked")) {
+    console.log("you win");
+    correct++;
+  } else {
+    console.log("wrong");
+    incorrect++;
+  }
+  if ($("#mc15").is(":checked")) {
+    console.log("you win");
+    correct++;
+  } else {
+    console.log("wrong");
+    incorrect++;
+  }
+  if ($("#mc17").is(":checked")) {
+    console.log("you win");
+    correct++;
+  } else {
+    console.log("wrong");
+    incorrect++;
+  }
+  if ($("#mc21").is(":checked")) {
+    console.log("you win");
+    correct++;
+  } else {
+    console.log("wrong");
+    incorrect++;
+  }
+  if ($("#mc22").is(":checked")) {
+    console.log("you win");
+    correct++;
+  } else {
+    console.log("wrong");
+    incorrect++;
+  }
+  if ($("#mc27").is(":checked")) {
+    console.log("you win");
+    correct++;
+  } else {
+    console.log("wrong");
+    incorrect++;
+  }
+  if ($("#mc30").is(":checked")) {
+    console.log("you win");
+    correct++;
+  } else {
+    console.log("wrong");
+    incorrect++;
+  }
+  console.log(correct);
+  console.log(incorrect);
+  $("#over").text("It's over, here's how you did:");
+  $("#numberCorrect").text("Correct: " + correct);
+  $("#numberIncorrect").text("Incorrect: " + incorrect);
+});
+//This was my attempt to calculate unchecked ones but the code above marks unanswered ones incorrect in the else statement
+// $("#button").on("click", function uncheck() {
+//   if ($("#mc1").is(":unchecked")) {
+//     console.log("you skipped one");
+//     unanswered++;
+//   }
+
+//   console.log(unanswered);
+// });
